@@ -1,0 +1,20 @@
+{% extends 'plantilla.html' %}
+{% block title %}Inicio - Cursos{% endblock %}
+
+{% block content %}
+<h1>BIENVENIDOS AL SISTEMA DE CURSOS</h1>
+<p>ELEGI QUE ACTIVIDAD NECESITAS .</p>
+
+<ul style="list-style-type: none; padding: 0; margin-top: 20px;">
+    <li style="margin-bottom: 10px;">
+        <a href="{% url 'curso_list' %}" class="button" style="padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none; font-weight: 600;">
+            Ver Cursos
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'instructor_list' %}" class="button" style="padding: 10px 20px; background-color: #007bff; color: white; border-radius: 5px; text-decoration: none; font-weight: 600;">
+            Ver Instructores
+        </a>
+    </li>
+</ul>
+{% endblock %}

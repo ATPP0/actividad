@@ -1,0 +1,18 @@
+{% extends 'plantilla.html' %}
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+<h1>{{ titulo }}</h1>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div style="margin-top: 15px;">
+        <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background-color 0.3s ease;">
+            Guardar
+        </button>
+        <a href="{% url 'curso_list' %}" style="margin-left: 15px; color: #007bff; font-weight: 600; text-decoration: none; line-height: 2.4em;">
+            Cancelar
+        </a>
+    </div>
+</form>
+{% endblock %}
